@@ -12,7 +12,7 @@ def main():
         with conn:
             print("connected by ", addr)
             data = conn.recv(512)
-            if not data:
+            if data:
                 conn.sendall(data)
 
 
